@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">PersonalDataForm-DPA-1</string>
+    <string-array name="list_profession">
+        <item>Developer</item>
+        <item>Cozinheiro</item>
+        <item>Biomédico</item>
+        <item>Eletricista</item>
+        <item>Balconista</item>
+    </string-array>
+</resources>
