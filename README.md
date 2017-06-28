@@ -5,6 +5,7 @@ Exercises of the Especialização em sistemas para dispositivos móveis (Systems
 #### Find below the description of the project of each folder:
 
 ## Personal Data Form - Exercise 1
+Folder: PersonalDataForm-DPA-1
 There are two screens/activities. The first activity holds several different types of fields, such as plain texts, date, radiobuttons, autocomplete and password. The second activity just display the content of the previous activity in multiline field. 
 
 #### What was learnt?
