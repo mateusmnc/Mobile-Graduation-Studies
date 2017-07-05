@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Calculadora de Combustivel</string>
+    <string-array name="list_of_features">
+        <item>Qual combustivel usar?</item>
+        <item>Calcular média simples</item>
+        <item>Calcular média completa</item>
+        <item>Calcular custo do trecho</item>
+    </string-array>
 </resources>

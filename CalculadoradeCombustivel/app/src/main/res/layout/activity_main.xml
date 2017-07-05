@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="7dp"
         android:onClick="onClick"
         android:text="Calcular Media completa"
         android:textSize="12sp"
@@ -53,7 +53,7 @@
     <Button
         android:id="@+id/pergPrecoTrechoBt"
         android:layout_width="206dp"
-        android:layout_height="42dp"
+        android:layout_height="48dp"
         android:layout_marginLeft="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -62,100 +62,6 @@
         android:textSize="12sp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/consumoVeiNum" />
-
-    <Button
-        android:id="@+id/pergCombBt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="11dp"
-        android:onClick="onClick"
-        android:text="Qual combustível usar?"
-        android:textSize="12sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/precoEtaNum" />
-
-    <EditText
-        android:id="@+id/precoGasNum"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Preço da gasolina"
-        android:inputType="numberDecimal"
-        android:textSize="14sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/consumoGasNum"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Consumo de gasolina"
-        android:inputType="numberDecimal"
-        android:textSize="14sp"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toRightOf="@+id/precoGasNum"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/precoEtaNum"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="Preço do etanól"
-        android:inputType="numberDecimal"
-        android:textSize="14sp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/precoGasNum" />
-
-    <EditText
-        android:id="@+id/consumoEtaNum"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="Consumo de etanól"
-        android:inputType="numberDecimal"
-        android:textSize="14sp"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toRightOf="@+id/precoEtaNum"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/consumoGasNum"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
-
-    <TextView
-        android:id="@+id/respCombTxt"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginTop="23dp"
-        android:hint="Gasolina/Etanól"
-        android:textAlignment="textEnd"
-        android:textSize="18sp"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toRightOf="@+id/pergCombBt"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/consumoEtaNum"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
 
     <TextView
         android:id="@+id/respMedSimNum"
@@ -171,7 +77,7 @@
         app:layout_constraintRight_toRightOf="parent"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="17dp"
         app:layout_constraintTop_toBottomOf="@+id/litroAbastNum" />
 
     <TextView
@@ -182,7 +88,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="19dp"
+        android:layout_marginTop="18dp"
         android:hint="0.00 km/l"
         android:textAlignment="textEnd"
         android:textSize="18sp"
@@ -195,13 +101,13 @@
         android:id="@+id/kmRodadoNum"
         android:layout_width="166dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="Km rodados"
         android:inputType="numberDecimal"
         android:textSize="14sp"
-        app:layout_constraintTop_toBottomOf="@+id/pergCombBt"
-        tools:layout_editor_absoluteX="8dp" />
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/featuresList" />
 
     <EditText
         android:id="@+id/litroAbastNum"
@@ -211,7 +117,6 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="22dp"
         android:ems="10"
         android:hint="Litros abastecidos"
         android:inputType="numberDecimal"
@@ -219,7 +124,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toRightOf="@+id/kmRodadoNum"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/respCombTxt" />
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/featuresList" />
 
     <EditText
         android:id="@+id/kmInicialNum"
@@ -281,7 +187,9 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toRightOf="@+id/consumoVeiNum"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/distanciaAlvoNum" />
+        app:layout_constraintTop_toBottomOf="@+id/distanciaAlvoNum"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
 
     <EditText
         android:id="@+id/consumoVeiNum"
@@ -294,7 +202,8 @@
         android:inputType="numberDecimal"
         android:textSize="14sp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/distanciaAlvoNum" />
+        app:layout_constraintTop_toBottomOf="@+id/distanciaAlvoNum"
+        android:layout_marginStart="8dp" />
 
     <TextView
         android:id="@+id/respPrecoTrecho"
@@ -308,6 +217,20 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toRightOf="@+id/pergPrecoTrechoBt"
         app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="471dp" />
+        tools:layout_editor_absoluteY="471dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp" />
+
+    <ListView
+        android:id="@+id/featuresList"
+        android:layout_width="351dp"
+        android:layout_height="165dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="7dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

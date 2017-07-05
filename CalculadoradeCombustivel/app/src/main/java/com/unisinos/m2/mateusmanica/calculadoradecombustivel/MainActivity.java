@@ -1,55 +1,53 @@
 package com.unisinos.m2.mateusmanica.calculadoradecombustivel;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-    private Button mPergCombBt;
+
+    private AdapterView.OnItemClickListener itemClickHandler = new AdapterView.OnItemClickListener() {
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+            if (id == 0){
+                Intent typeOfFuelAct = new Intent(MainActivity.this, typeOfFuelAct.class);
+                startActivity(typeOfFuelAct);
+            }else if (id == 1){
+
+            }else if (id == 2){
+
+            }else if (id == 3){
+
+            }
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mPergCombBt = (Button)findViewById(R.id.pergCombBt);
+        //Create the adapter with the strings from the resources(strings.xml)
+        ArrayAdapter<String> adapterFeatures = new ArrayAdapter<String>(
+                this,                                                           //context
+                R.layout.support_simple_spinner_dropdown_item,                  //layout
+                getResources().getStringArray(R.array.list_of_features));//String[]
+        ListView listOfFeatures = ((ListView)findViewById(R.id.featuresList));
+        listOfFeatures.setAdapter(adapterFeatures);
+        listOfFeatures.setOnItemClickListener(itemClickHandler);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.pergCombBt:
-                //Get the value of Gasoline and Etanol prices and performance
-                String precoGasNum   = ((EditText)findViewById(R.id.precoGasNum)).getText().toString();
-                String precoEtaNum   = ((EditText)findViewById(R.id.precoEtaNum)).getText().toString();
-                String consumoGasNum = ((EditText)findViewById(R.id.consumoGasNum)).getText().toString();
-                String consumoEtaNum = ((EditText)findViewById(R.id.consumoEtaNum)).getText().toString();
-
-                //In case the fields are initial an exception is raised, so just let's notify the user
-                //Toast notification
-                if (precoEtaNum.equals("") || precoGasNum.equals("") ||
-                        consumoEtaNum.equals("") || consumoGasNum.equals("")) {
-                    launchToast("Preencha os campos acima");
-                    return;
-                }
-                //convert to double
-                double precoGas = Double.valueOf(precoGasNum);
-                double precoEta = Double.valueOf(precoEtaNum);
-                double consumoGas = Double.valueOf(consumoEtaNum);
-                double consumoEta = Double.valueOf(consumoGasNum);
-                //Check the 70% rule or the if the price rate reaches the performance rate
-                if ( (precoEta / precoGas <= 0.7) || ( precoEta / precoGas <= consumoEta / consumoGas)) {
-                    //Etanol is more expensive than 70% of gasoline price, or the rate given by the
-                    // performance calc. It does not worth the investment
-                    ((TextView) findViewById(R.id.respCombTxt)).setText("Etanol");
-                }else {
-                    ((TextView) findViewById(R.id.respCombTxt)).setText("Gasolina");
-                }
-
-                return;
             case R.id.pergMedSimBt:
                 //Get the value for run kilometers and liters filled up in tank
                 String kmRodadoStr = ((EditText)findViewById(R.id.kmRodadoNum)).getText().toString();
