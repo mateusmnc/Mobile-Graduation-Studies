@@ -27,17 +27,18 @@
         android:id="@+id/backBt"
         android:layout_width="351dp"
         android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:text="Voltar"
-        app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.111"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:onClick="onClick"
+        android:text="Voltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calculateBt" />
 
     <Button
@@ -48,6 +49,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="16dp"
         android:layout_marginStart="8dp"
+        android:onClick="onClick"
         android:text="Novo Cálculo"
         app:layout_constraintBottom_toBottomOf="@+id/calculateBt"
         app:layout_constraintHorizontal_bias="0.0"
@@ -140,22 +142,23 @@
         tools:layout_editor_absoluteY="0dp"
         tools:layout_editor_absoluteX="192dp" />
 
-    <EditText
+    <TextView
         android:id="@+id/ansTypeOfFuelTxt"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginTop="16dp"
-        android:ems="10"
+        android:layout_marginTop="8dp"
         android:hint="\?"
-        android:inputType="textPersonName"
+        android:paddingTop="40dp"
         android:textAlignment="center"
         android:textSize="56sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/consumpAlcNum" />
+        app:layout_constraintTop_toBottomOf="@+id/consumpAlcNum"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintVertical_bias="1.0" />
 
 </android.support.constraint.ConstraintLayout>

@@ -18,16 +18,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private AdapterView.OnItemClickListener itemClickHandler = new AdapterView.OnItemClickListener() {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-            if (id == 0){
-                Intent typeOfFuelAct = new Intent(MainActivity.this, typeOfFuelAct.class);
-                startActivity(typeOfFuelAct);
-            }else if (id == 1){
+        if (id == 0){
+            Intent typeOfFuelAct = new Intent(MainActivity.this, typeOfFuelAct.class);
+            startActivity(typeOfFuelAct);
+        }else if (id == 1){
+            Intent calcSimpleAverage = new Intent(MainActivity.this, calcSimpleAverage.class);
+            startActivity(calcSimpleAverage);
+        }else if (id == 2){
 
-            }else if (id == 2){
+        }else if (id == 3){
 
-            }else if (id == 3){
-
-            }
+        }
         }
     };
 
@@ -48,26 +49,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case R.id.pergMedSimBt:
-                //Get the value for run kilometers and liters filled up in tank
-                String kmRodadoStr = ((EditText)findViewById(R.id.kmRodadoNum)).getText().toString();
-                String litrosStr   = ((EditText)findViewById(R.id.litroAbastNum)).getText().toString();
-
-                //In case the fields are initial an exception is raised, so just let's notify the user
-                //Toast notification
-                if (kmRodadoStr.equals("") || litrosStr.equals("")) {
-                    launchToast("Preencha os campos Km rodados e Litros abastecidos");
-                    return;
-                }
-                double kmRodado  = Integer.valueOf(kmRodadoStr);
-                double litros = Double.valueOf(litrosStr);
-
-                //Calculate the simple average
-                double simpleAverage = kmRodado / litros;
-
-                ((TextView)findViewById(R.id.respMedSimNum)).setText(simpleAverage + " km/l");
-
-                return;
             case R.id.pergMedCompBt:
                 //Get the value for liters in tank, initial and final kilometers
                 String kmInitialStr = ((EditText)findViewById(R.id.kmInicialNum)).getText().toString();
