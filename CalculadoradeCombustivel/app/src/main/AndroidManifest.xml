@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".typeOfFuelAct" />
-        <activity android:name=".calcSimpleAverage"></activity>
+        <activity android:name=".calcSimpleAverage" />
+        <activity android:name=".CalcCompAverage" />
+        <activity android:name=".CalcCostOfPath"></activity>
     </application>
 
 </manifest>

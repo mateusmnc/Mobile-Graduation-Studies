@@ -64,7 +64,8 @@ public class typeOfFuelAct extends AppCompatActivity implements View.OnClickList
         ((EditText)findViewById(R.id.priceGasNum)).setText("");
         ((EditText)findViewById(R.id.priceAlcNum)).setText("");
         ((EditText)findViewById(R.id.consumpGasNum)).setText("");
-        ((EditText)findViewById(R.id.consumpGasNum)).setText("");
+        ((EditText)findViewById(R.id.consumpAlcNum)).setText("");
+        ((TextView) findViewById(R.id.ansTypeOfFuelTxt)).setText("?");
     }
 
     private void launchToast(String message){

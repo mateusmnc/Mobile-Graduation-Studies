@@ -47,7 +47,7 @@ public class calcSimpleAverage extends AppCompatActivity implements View.OnClick
         //Calculate the simple average
         double simpleAverage = runKmNum / filledTankNum;
 
-        ((TextView)findViewById(R.id.respMedSimNum)).setText(simpleAverage + " km/l");
+        ((TextView)findViewById(R.id.ansCSATxt)).setText(simpleAverage + " km/l");
     }
 
     private void clearFields() {
