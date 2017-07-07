@@ -35,7 +35,7 @@ public class typeOfFuelAct extends AppCompatActivity implements View.OnClickList
         String priceGas = ((EditText)findViewById(R.id.priceGasNum)).getText().toString();
         String priceAlc = ((EditText)findViewById(R.id.priceAlcNum)).getText().toString();
         String consGas  = ((EditText)findViewById(R.id.consumpGasNum)).getText().toString();
-        String consAlc  = ((EditText)findViewById(R.id.consumpGasNum)).getText().toString();
+        String consAlc  = ((EditText)findViewById(R.id.consumpAlcNum)).getText().toString();
 
         //In case one field is initial send a toast message/notification to the user
         if (priceGas.equals("") || priceAlc.equals("") || consGas.equals("") || consAlc.equals("")) {

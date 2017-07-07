@@ -96,29 +96,31 @@
         android:id="@+id/askCalcPricePathBt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="onClick"
         android:text="Calcular custo"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/guideline7"
-        app:layout_constraintTop_toTopOf="@+id/guideline8"
-        android:layout_marginTop="8dp"
-        app:layout_constraintHorizontal_bias="0.0"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp" />
+        app:layout_constraintTop_toTopOf="@+id/guideline8" />
 
     <Button
         android:id="@+id/newCalcCostBt"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:onClick="onClick"
         android:text="Novo Cálculo"
+        app:layout_constraintBottom_toBottomOf="@+id/askCalcPricePathBt"
         app:layout_constraintLeft_toLeftOf="@+id/guideline7"
         app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginStart="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/askCalcPricePathBt"
-        android:layout_marginEnd="8dp"
         app:layout_constraintTop_toTopOf="@+id/askCalcPricePathBt" />
 
     <Button
@@ -128,6 +130,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
+        android:onClick="onClick"
         android:text="Voltar"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"

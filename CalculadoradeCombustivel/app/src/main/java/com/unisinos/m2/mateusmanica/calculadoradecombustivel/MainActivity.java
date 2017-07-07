@@ -28,7 +28,8 @@ public class MainActivity extends AppCompatActivity {
             Intent calcCompAverage = new Intent(MainActivity.this, CalcCompAverage.class);
             startActivity(calcCompAverage);
         }else if (id == 3){
-
+            Intent calcCostOfPath = new Intent(MainActivity.this, CalcCostOfPath.class);
+            startActivity(calcCostOfPath);
         }
         }
     };
