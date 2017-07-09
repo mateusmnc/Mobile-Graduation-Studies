@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Shared Preferences Prototype</string>
+    <string-array name="list_of_lang">
+        <item>Português</item>
+        <item>Inglês</item>
+        <item>Español</item>
+    </string-array>
+</resources>
