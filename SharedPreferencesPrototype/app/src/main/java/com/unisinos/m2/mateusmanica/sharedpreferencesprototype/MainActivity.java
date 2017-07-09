@@ -1,11 +1,16 @@
 package com.unisinos.m2.mateusmanica.sharedpreferencesprototype;
 
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +25,32 @@ public class MainActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
+
+        //Read sharedPreferences
+        SharedPreferences sp = getPreferences(Context.MODE_PRIVATE);
+        String defaultLang = getResources().getString(R.string.DEFAULT_LANGUAGE);
+        String language = sp.getString(getString(R.string.LANGUAGE), defaultLang);
+
+        int langPos = adapter.getPosition(language);
+        spinner.setSelection(langPos);
+        spinner.setOnItemSelectedListener(this);
+        //criar - iniciar - manejar
+//        Context context = getApplicationContext();
+//        SharedPreferences sharedPref = context.getSharedPreferences( getString(R.string.PREFERENCE_FILE_KEY), Context.MODE_PRIVATE);
+
+    }
+
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        String newLang = parent.getSelectedItem().toString();
+        SharedPreferences.Editor spEditor = getPreferences(Context.MODE_PRIVATE).edit();
+        spEditor.putString(getString(R.string.LANGUAGE), newLang);
+        spEditor.commit();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 }

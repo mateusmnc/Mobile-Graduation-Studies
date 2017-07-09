@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Shared Preferences Prototype</string>
+    <string name="PREFERENCE_FILE_KEY">com.unisinos.m2.mateusmanica.sharedpreferencesprototype</string>
+    <string name="LANGUAGE">language</string>
+    <string name="DEFAULT_LANGUAGE">Português</string>
     <string-array name="list_of_lang">
         <item>Português</item>
         <item>Inglês</item>
