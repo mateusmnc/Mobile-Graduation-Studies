@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name" translatable="false">InternacionalizacaodeApps</string>
+    <string name="name">Nome</string>
+    <string name="Age">Idade</string>
+    <string name="City">Cidade</string>
+    <string-array name="langList">
+        <item>Português</item>
+        <item>Inglês</item>
+        <item>Espanhol</item>
+    </string-array>
+</resources>

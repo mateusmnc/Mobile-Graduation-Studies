@@ -34,10 +34,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         int langPos = adapter.getPosition(language);
         spinner.setSelection(langPos);
         spinner.setOnItemSelectedListener(this);
-        //criar - iniciar - manejar
-//        Context context = getApplicationContext();
-//        SharedPreferences sharedPref = context.getSharedPreferences( getString(R.string.PREFERENCE_FILE_KEY), Context.MODE_PRIVATE);
-
     }
 
 
