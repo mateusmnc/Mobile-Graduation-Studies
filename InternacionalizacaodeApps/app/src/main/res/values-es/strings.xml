@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="name">Nombr</string>
+    <string name="name">Nombre</string>
     <string name="Age">Edad</string>
     <string name="City">Ciudad</string>
 </resources>
